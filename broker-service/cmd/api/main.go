@@ -7,7 +7,7 @@ import (
 )
 
 
-const webPosrt  = "8002"
+const webPosrt  = "80"
 
 type Config struct {}
 func main()  {
@@ -15,13 +15,11 @@ func main()  {
 
 	log.Printf("Starting Broker servive on port %s\n",webPosrt)
 
-	//define the server
 	srv := &http.Server{
 		Addr: fmt.Sprintf(":%s",webPosrt),
 		Handler: app.routes(),
 	}
 
-	//start server
 	err := srv.ListenAndServe()
 
 	if err != nil {
