@@ -3,9 +3,10 @@ package data
 import (
 	"context"
 	"database/sql"
+	"errors"
 	"log"
 	"time"
-	
+
 	"golang.org/x/crypto/bcrypt"
 )
 
